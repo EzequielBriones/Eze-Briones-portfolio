@@ -1,0 +1,120 @@
+@use "../abstracts" as *;
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+
+  &__container ul {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    align-items: center;
+
+    & li {
+      list-style: none;
+      padding: 0.7rem;
+
+      &:nth-child(1) {
+        border-radius: 3px;
+        transition: all 0.2s ease-in-out;
+        padding: 13px 0;
+        cursor: pointer;
+        background-color: $color-primary-400;
+        color: $color-terciary-400;
+        font-size: 1.15rem;
+        border: none;
+        border-bottom: 1.5px $color-terciary-400 solid;
+        position: relative;
+        overflow: hidden;
+      }
+
+      & a {
+        text-decoration: none;
+        color: $white;
+        padding: 0.7rem;
+        transition: all 0.2s ease-in-out;
+        background-image: linear-gradient($color-terciary-400, $color-terciary-400);
+        background-size: 0% 1px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        &:hover,
+        &:focus {
+          color: $color-terciary-400;
+          outline: none;
+          background-size: 100% 1px;
+        }
+      }
+    }
+  }
+
+  &__CTA {
+    // border-radius: 3px;
+    // transition: all 0.2s ease-in-out;
+    // padding: 0.7rem;
+    // cursor: pointer;
+    // background-color: $color-primary-400;
+    // color: $color-terciary-400;
+    // font-size: 1.15rem;
+    // border: none;
+    // border-bottom: 1.5px $color-terciary-400 solid;
+    // position: relative;
+
+    &:hover,
+    &:focus {
+      background: $color-secondary-400;
+      box-shadow: 0 0 10px $color-secondary-400, 0 0 40px $color-secondary-400, 0 0 80px $color-secondary-400;
+      border: 1.5px $color-terciary-400 solid;
+      transition-delay: 1s;
+      padding: 12px 0.7rem;
+    }
+
+    & span {
+      position: absolute;
+      display: block;
+    }
+
+    & span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, $color-terciary-400);
+    }
+
+    &:hover span:nth-child(1) {
+      left: 100%;
+      transition: 1s;
+      transition-delay: 0.5s;
+    }
+
+    & span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 1.5px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, $color-terciary-400);
+    }
+
+    &:hover span:nth-child(2) {
+      top: 100%;
+      transition: 1s;
+      transition-delay: 0.75s;
+    }
+
+    & span:nth-child(3) {
+      bottom: -100%;
+      left: 0;
+      width: 1.5px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, $color-terciary-400);
+    }
+
+    &:hover span:nth-child(3) {
+      bottom: 100%;
+      transition: 1s;
+      transition-delay: 0.25s;
+    }
+  }
+}

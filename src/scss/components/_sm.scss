@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.SM {
+  position: fixed;
+  width: 2.5rem;
+  bottom: 0;
+  left: 1rem;
+  right: auto;
+
+  & ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    box-align: center;
+    align-items: center;
+    margin: 0;
+    gap: 2rem;
+    padding: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 12rem;
+    }
+
+    & li {
+      &:hover {
+        transform: translateY(-0.3rem);
+        transition: 0.2s all ease-in-out;
+      }
+      & a {
+        font-size: 1.5rem;
+        color: $grey-400;
+        transition: 0.2s all ease-in-out;
+        padding: 1rem;
+
+        &:hover {
+          color: $color-secondary-600;
+        }
+      }
+    }
+  }
+}

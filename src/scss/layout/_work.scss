@@ -1,0 +1,112 @@
+@use "../abstracts" as *;
+
+.work {
+  color: $grey-600;
+  margin-left: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__container {
+    position: relative;
+    border: 1px solid $grey-400;
+    padding: 1rem;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 2px solid $color-secondary-400;
+      padding: 1.3rem;
+    }
+
+    &:hover > .work__photo {
+      filter: none;
+      transform: scale(1.05);
+      width: 50%;
+      transition: all 0.5s;
+    }
+
+    &:hover > .work__num {
+      transition: all 0.5s;
+      transform: scale(1);
+      color: $white;
+    }
+
+    &:hover > .work__desc {
+      transform: scale(1);
+      transition: all 0.6s;
+      z-index: 1;
+    }
+
+    &:hover > .work__photo--2 {
+      background-position: left center;
+    }
+  }
+
+  &__photo {
+    filter: saturate(0%) brightness(100%) contrast(100%);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 13rem;
+    transition: all 0.5s;
+  }
+  &__photo--1 {
+    background-image: url(images/project1.png);
+    background-position: center 20%;
+  }
+
+  &__photo--2 {
+    background-image: url(images/project2.png);
+  }
+
+  &__photo--3 {
+    background-image: url(images/project3.png);
+  }
+
+  &__num {
+    position: absolute;
+    top: -2.5rem;
+    font-size: 4rem;
+    right: 2rem;
+    color: $grey-400;
+    transition: all 0.5s;
+    transform: scale(0.5);
+  }
+
+  &__desc {
+    width: 40%;
+    position: absolute;
+    right: 4rem;
+    top: 10%;
+    z-index: -1;
+    transform: scale(0);
+    transition: all 0.1s;
+    color: $white;
+    background-color: $color-secondary-400;
+    padding: 2rem 1.5rem;
+
+    & ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin-top: 2rem;
+
+      & li {
+        &:hover {
+          transform: translateY(-0.3rem);
+          transition: 0.2s all ease-in-out;
+        }
+        & a {
+          font-size: 1.5rem;
+          color: $grey-400;
+          transition: 0.2s all ease-in-out;
+          padding: 1rem;
+
+          &:hover {
+            color: $color-secondary-600;
+          }
+        }
+      }
+    }
+  }
+}

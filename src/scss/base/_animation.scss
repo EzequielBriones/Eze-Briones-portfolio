@@ -1,0 +1,26 @@
+@keyframes drop {
+  0% {
+  }
+
+  70% {
+    transform: translateX(-1040px);
+  }
+
+  100% {
+    transform: translateX(-1030px);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translateX(-1030px);
+  }
+
+  70% {
+    transform: translateX(-1040px);
+  }
+
+  100% {
+    right: -900px;
+  }
+}

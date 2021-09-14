@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.landing {
+  max-width: 70rem;
+  margin-top: 3rem;
+  margin-left: 6rem;
+  color: $grey-600;
+  text-transform: capitalize;
+
+  &__name {
+    font-size: 7rem;
+    font-weight: 400;
+  }
+
+  &__job {
+    font-size: 2.4rem;
+    color: $grey-400;
+  }
+
+  &__desc {
+    margin-top: 1.5rem;
+    text-transform: none;
+    width: 55rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+}
