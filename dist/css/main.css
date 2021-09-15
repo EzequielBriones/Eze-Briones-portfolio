@@ -518,6 +518,14 @@ body {
   font-size: 3rem;
   margin-bottom: 3.8rem;
 }
+.about__icons {
+  display: flex;
+  align-items: center;
+}
+.about__icons-bullets box-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
 .about__icons ul {
   display: grid;
   gap: 0.5rem;
@@ -525,35 +533,7 @@ body {
   list-style: none;
 }
 .about__icons ul li {
-  padding-left: 1.8rem;
   margin-bottom: 0.5rem;
-}
-.about__icons ul li:nth-child(1) {
-  background: url(../vendors/icons/html5-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(2) {
-  background: url(../vendors/icons/git-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(3) {
-  background: url(../vendors/icons/css3-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(4) {
-  background: url(../vendors/icons/globe-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(5) {
-  background: url(../vendors/icons/js-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(6) {
-  background: url(../vendors/icons/globe-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(7) {
-  background: url(../vendors/icons/sass-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(8) {
-  background: url(../vendors/icons/globe-logo.png) left center no-repeat;
-}
-.about__icons ul li:nth-child(9) {
-  background: url(../vendors/icons/pencil-logo.png) left center no-repeat;
 }
 
 .title {
@@ -831,15 +811,15 @@ body {
 .input__span::after {
   right: 50%;
 }
-.input.focus .input__span::before, .input.focus .input__span::after {
-  width: 50%;
-  opacity: 1;
-}
 .input.focus .input__label {
   top: 0;
   transform: translateY(-50%);
   left: 1.5625rem;
   font-style: 0.8rem;
+}
+.input.focus .input__span::before, .input.focus .input__span::after {
+  width: 50%;
+  opacity: 1;
 }
 
 .textarea {

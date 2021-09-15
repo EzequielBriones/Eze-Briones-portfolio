@@ -26,51 +26,24 @@
     }
   }
 
-  &__icons ul {
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: repeat(2, 1fr);
-    list-style: none;
+  &__icons {
+    display: flex;
+    align-items: center;
 
-    & li {
-      padding-left: 1.8rem;
-      margin-bottom: 0.5rem;
+    &-bullets box-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
     }
 
-    & li:nth-child(1) {
-      background: url(../vendors/icons/html5-logo.png) left center no-repeat;
-    }
+    & ul {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      list-style: none;
 
-    & li:nth-child(2) {
-      background: url(../vendors/icons/git-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(3) {
-      background: url(../vendors/icons/css3-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(4) {
-      background: url(../vendors/icons/globe-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(5) {
-      background: url(../vendors/icons/js-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(6) {
-      background: url(../vendors/icons/globe-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(7) {
-      background: url(../vendors/icons/sass-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(8) {
-      background: url(../vendors/icons/globe-logo.png) left center no-repeat;
-    }
-
-    & li:nth-child(9) {
-      background: url(../vendors/icons/pencil-logo.png) left center no-repeat;
+      & li {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }
