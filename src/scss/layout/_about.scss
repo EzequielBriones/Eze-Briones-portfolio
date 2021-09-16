@@ -7,14 +7,31 @@
   grid-template-columns: repeat(2, 1fr);
   color: $grey-600;
 
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+    gap: 3rem;
+  }
+
+  @include respond(tab-land) {
+    margin-bottom: 2rem;
+  }
+
   &__container {
     width: 40rem;
+    @include respond(phone) {
+      width: 80%;
+    }
   }
 
   &__info {
     font-size: 1.2rem;
     line-height: 1.4;
     padding: 0.8rem 0;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 
   &__knowledge {
@@ -22,6 +39,10 @@
     &-title {
       font-size: 3rem;
       margin-bottom: 3.8rem;
+
+      @include respond(phone) {
+        margin-bottom: 3rem;
+      }
     }
   }
 
@@ -33,6 +54,9 @@
       font-size: 1.5rem;
       margin-right: 0.5rem;
       transform: translateY(0.4rem);
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
 
     & ul {
@@ -43,6 +67,9 @@
 
       & li {
         margin-bottom: 0.5rem;
+        @include respond(phone) {
+          font-size: 2rem;
+        }
       }
     }
   }

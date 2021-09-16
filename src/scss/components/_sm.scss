@@ -7,6 +7,10 @@
   left: 1rem;
   right: auto;
 
+  @include respond(phone) {
+    display: none;
+  }
+
   & ul {
     list-style: none;
     display: flex;

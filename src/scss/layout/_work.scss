@@ -13,6 +13,14 @@
     padding: 1rem;
     transition: all 0.5s;
 
+    @include respond(phone) {
+      border: 2px solid $color-secondary-400;
+      padding: 1.3rem;
+      filter: none;
+      transform: scale(1.05);
+      transition: all 0.5s;
+    }
+
     &:hover {
       border: 2px solid $color-secondary-400;
       padding: 1.3rem;

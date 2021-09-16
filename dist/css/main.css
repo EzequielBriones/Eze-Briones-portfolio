@@ -37,6 +37,31 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+  transition: 0.5s;
+}
+@media only screen and (min-width: 81.25em) {
+  html {
+    font-size: 120%;
+  }
+}
+@media only screen and (max-width: 61.9375em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   background-color: #021422;
   color: white;
@@ -61,6 +86,11 @@ body {
   bottom: 0;
   left: 1rem;
   right: auto;
+}
+@media only screen and (max-width: 36em) {
+  .SM {
+    display: none;
+  }
 }
 .SM ul {
   list-style: none;
@@ -131,6 +161,13 @@ body {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 36em) {
+  .nav__container ul li:nth-child(1) {
+    color: #6ebef7;
+    border-bottom: none;
+    background-size: 100% 1px;
+  }
+}
 .nav__container ul li a {
   text-decoration: none;
   color: white;
@@ -140,6 +177,13 @@ body {
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: left bottom;
+}
+@media only screen and (max-width: 36em) {
+  .nav__container ul li a {
+    color: #6ebef7;
+    outline: none;
+    background-size: 100% 1px;
+  }
 }
 .nav__container ul li a:hover, .nav__container ul li a:focus {
   color: #6ebef7;
@@ -152,6 +196,14 @@ body {
   border: 1.5px #6ebef7 solid;
   transition-delay: 1s;
   padding: 12px 0.7rem;
+}
+@media only screen and (max-width: 36em) {
+  .nav__CTA:hover, .nav__CTA:focus {
+    background: #102a42;
+    box-shadow: 0 0 10px #102a42, 0 0 40px #102a42, 0 0 80px #102a42;
+    border: 1.5px #6ebef7 solid;
+    transition-delay: 1s;
+  }
 }
 .nav__CTA span {
   position: absolute;
@@ -213,13 +265,28 @@ body {
   color: #cccccc;
   text-transform: capitalize;
 }
+@media only screen and (max-width: 36em) {
+  .landing {
+    margin-left: 3rem;
+  }
+}
 .landing__name {
   font-size: 7rem;
   font-weight: 400;
 }
+@media only screen and (max-width: 48em) {
+  .landing__name {
+    font-size: 8rem;
+  }
+}
 .landing__job {
   font-size: 2.4rem;
   color: gray;
+}
+@media only screen and (max-width: 36em) {
+  .landing__job {
+    margin-top: 1.5rem;
+  }
 }
 .landing__desc {
   margin-top: 1.5rem;
@@ -227,6 +294,17 @@ body {
   width: 55rem;
   font-size: 1.2rem;
   line-height: 1.3;
+}
+@media only screen and (max-width: 48em) {
+  .landing__desc {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .landing__desc {
+    font-size: 2.5rem;
+  }
 }
 
 .title {
@@ -269,13 +347,35 @@ body {
   grid-template-columns: repeat(2, 1fr);
   color: #cccccc;
 }
+@media only screen and (max-width: 36em) {
+  .about {
+    grid-template-columns: 1fr;
+    margin-bottom: 4rem;
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 61.9375em) {
+  .about {
+    margin-bottom: 2rem;
+  }
+}
 .about__container {
   width: 40rem;
+}
+@media only screen and (max-width: 36em) {
+  .about__container {
+    width: 80%;
+  }
 }
 .about__info {
   font-size: 1.2rem;
   line-height: 1.4;
   padding: 0.8rem 0;
+}
+@media only screen and (max-width: 36em) {
+  .about__info {
+    font-size: 2rem;
+  }
 }
 .about__knowledge {
   padding: 1rem 0 0;
@@ -283,6 +383,11 @@ body {
 .about__knowledge-title {
   font-size: 3rem;
   margin-bottom: 3.8rem;
+}
+@media only screen and (max-width: 36em) {
+  .about__knowledge-title {
+    margin-bottom: 3rem;
+  }
 }
 .about__icons {
   display: flex;
@@ -293,6 +398,11 @@ body {
   margin-right: 0.5rem;
   transform: translateY(0.4rem);
 }
+@media only screen and (max-width: 36em) {
+  .about__icons-bullets box-icon {
+    font-size: 2rem;
+  }
+}
 .about__icons ul {
   display: grid;
   gap: 0.5rem;
@@ -301,6 +411,11 @@ body {
 }
 .about__icons ul li {
   margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 36em) {
+  .about__icons ul li {
+    font-size: 2rem;
+  }
 }
 
 .title {
@@ -327,6 +442,15 @@ body {
   border: 1px solid gray;
   padding: 1rem;
   transition: all 0.5s;
+}
+@media only screen and (max-width: 36em) {
+  .work__container {
+    border: 2px solid #102a42;
+    padding: 1.3rem;
+    filter: none;
+    transform: scale(1.05);
+    transition: all 0.5s;
+  }
 }
 .work__container:hover {
   border: 2px solid #102a42;
@@ -436,7 +560,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   border-radius: 2px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 36em) {
   .contact__form {
     grid-template-columns: 1fr;
   }

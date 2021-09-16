@@ -27,6 +27,12 @@
         border-bottom: 1.5px $color-terciary-400 solid;
         position: relative;
         overflow: hidden;
+
+        @include respond(phone) {
+          color: $color-terciary-400;
+          border-bottom: none;
+          background-size: 100% 1px;
+        }
       }
 
       & a {
@@ -39,6 +45,12 @@
         background-repeat: no-repeat;
         background-position: left bottom;
 
+        @include respond(phone) {
+          color: $color-terciary-400;
+          outline: none;
+          background-size: 100% 1px;
+        }
+
         &:hover,
         &:focus {
           color: $color-terciary-400;
@@ -50,17 +62,6 @@
   }
 
   &__CTA {
-    // border-radius: 3px;
-    // transition: all 0.2s ease-in-out;
-    // padding: 0.7rem;
-    // cursor: pointer;
-    // background-color: $color-primary-400;
-    // color: $color-terciary-400;
-    // font-size: 1.15rem;
-    // border: none;
-    // border-bottom: 1.5px $color-terciary-400 solid;
-    // position: relative;
-
     &:hover,
     &:focus {
       background: $color-secondary-400;
@@ -68,6 +69,13 @@
       border: 1.5px $color-terciary-400 solid;
       transition-delay: 1s;
       padding: 12px 0.7rem;
+
+      @include respond(phone) {
+        background: $color-secondary-400;
+        box-shadow: 0 0 10px $color-secondary-400, 0 0 40px $color-secondary-400, 0 0 80px $color-secondary-400;
+        border: 1.5px $color-terciary-400 solid;
+        transition-delay: 1s;
+      }
     }
 
     & span {

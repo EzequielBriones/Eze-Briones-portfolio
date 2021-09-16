@@ -7,14 +7,24 @@
   color: $grey-600;
   text-transform: capitalize;
 
+  @include respond(phone) {
+    margin-left: 3rem;
+  }
+
   &__name {
     font-size: 7rem;
     font-weight: 400;
+    @include respond(tab-port) {
+      font-size: 8rem;
+    }
   }
 
   &__job {
     font-size: 2.4rem;
     color: $grey-400;
+    @include respond(phone) {
+      margin-top: 1.5rem;
+    }
   }
 
   &__desc {
@@ -23,5 +33,14 @@
     width: 55rem;
     font-size: 1.2rem;
     line-height: 1.3;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
   }
 }
