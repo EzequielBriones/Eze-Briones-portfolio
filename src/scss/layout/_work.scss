@@ -37,7 +37,7 @@
       z-index: 1;
     }
 
-    &:hover > .work__photo--2 {
+    &:hover > .work__photo--1 {
       background-position: left center;
     }
   }
@@ -49,6 +49,7 @@
     background-size: cover;
     padding: 13rem;
     transition: all 0.5s;
+    border: 1px $color-secondary-600 solid;
   }
   &__photo--1 {
     background-image: url(images/project1.png);
@@ -61,6 +62,7 @@
 
   &__photo--3 {
     background-image: url(images/project3.png);
+    background-position: 10% 0;
   }
 
   &__num {

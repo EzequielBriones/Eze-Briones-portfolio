@@ -1,7 +1,5 @@
 const inputs = document.querySelectorAll(".input__in");
 const modBtn = document.querySelector(".nav__CTA");
-const modOver = document.querySelector(".modal-overlay");
-const closeBtn = document.querySelector(".close-btn");
 
 function focusFunc() {
   let parent = this.parentNode;
